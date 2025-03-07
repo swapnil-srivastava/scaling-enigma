@@ -12,6 +12,10 @@
 		"ghcr.io/devcontainers/features/sshd:1": {
 		"version": "latest"
 		}
+	},
+
+	"containerEnv": {
+		"CHROME_PATH": "/usr/bin/google-chrome" // Update this path to the actual path of your Chrome/Chromium executable
 	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
