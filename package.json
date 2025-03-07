@@ -2,9 +2,14 @@
   "name": "my-monorepo",
   "private": true,
   "devDependencies": {
-    "lerna": "^7.0.0"
+    "lerna": "^7.0.0",
+    "@changesets/cli": "^2.18.0"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "changeset": "changeset",
+    "version-packages": "changeset version"
+  }
 }
