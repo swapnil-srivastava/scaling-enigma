@@ -1,0 +1,26 @@
+{
+  "name": "component-3",
+  "version": "1.0.0",
+  "description": "A reusable LitElement component named Component3.",
+  "main": "src/Component3.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "publish": "npm publish"
+  },
+  "keywords": [
+    "lit-element",
+    "web-components",
+    "component"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "^3.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "jest": "^27.0.0"
+  }
+}

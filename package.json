@@ -1,21 +1,17 @@
 {
-  "name": "scaling-enigma",
+  "name": "my-monorepo",
   "private": true,
+  "workspaces": [
+    "packages/component-1",
+    "packages/component-2",
+    "packages/component-3"
+  ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{js,jsx,md}\""
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "publish": "lerna publish"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "turbo": "^2.4.4"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@10.8.2",
-  "workspaces": [
-    "packages/*"
-  ]
+    "lerna": "^4.0.0"
+  }
 }
