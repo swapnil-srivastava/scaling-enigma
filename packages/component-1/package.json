@@ -24,7 +24,8 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "azure:prepublish": "cp package.json README.md dist/"
   },
   "publishConfig": {
     "directory": "dist"
