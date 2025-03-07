@@ -11,3 +11,5 @@ class ComponentThree extends LitElement {
 }
 
 customElements.define('component-three', ComponentThree);
+
+export { ComponentThree};

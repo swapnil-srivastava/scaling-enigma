@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "changeset": "changeset",
-    "version-packages": "changeset version"
+    "version-packages": "changeset version",
+    "build": "lerna run build"
   }
 }

@@ -11,3 +11,5 @@ class ComponentOne extends LitElement {
 }
 
 customElements.define('component-one', ComponentOne);
+
+export { ComponentOne };
