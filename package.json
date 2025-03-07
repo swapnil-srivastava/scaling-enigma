@@ -13,6 +13,8 @@
     "version-packages": "changeset version",
     "build": "lerna run build",
     "clean": "find packages -type d -name 'node_modules' -exec rm -rf {} + && find packages -type d -name 'dist' -exec rm -rf {} + && find packages -type d -name 'storybook-static' -exec rm -rf {} +",
-    "build-storybook": "lerna run build-storybook"
+    "build-storybook": "lerna run build-storybook",
+    "prepublish": "lerna run prepublish",
+    "publish": "lerna publish"
   }
 }
