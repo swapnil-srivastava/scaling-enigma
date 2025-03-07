@@ -4,5 +4,19 @@
   "main": "src/Component2.js",
   "dependencies": {
     "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.5",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-webpack5-compiler-swc": "^2.1.0",
+    "@storybook/blocks": "^8.6.4",
+    "@storybook/test": "^8.6.4",
+    "@storybook/web-components": "^8.6.4",
+    "@storybook/web-components-webpack5": "^8.6.4",
+    "storybook": "^8.6.4"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   }
 }
