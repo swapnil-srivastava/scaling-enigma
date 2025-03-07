@@ -25,5 +25,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c"
+  },
+  "publishConfig": {
+    "directory": "dist"
   }
 }
