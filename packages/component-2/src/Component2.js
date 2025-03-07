@@ -1,25 +1,12 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
 
 class Component2 extends LitElement {
-  static get styles() {
-    return css`
-      :host {
-        display: block;
-        padding: 16px;
-        background-color: #f9f9f9;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-    `;
-  }
+  static styles = css`
+    /* ...styles... */
+  `;
 
   render() {
-    return html`
-      <div>
-        <h2>Component 2</h2>
-        <p>This is a reusable component built with LitElement.</p>
-      </div>
-    `;
+    return html`<p>Component 2</p>`;
   }
 }
 

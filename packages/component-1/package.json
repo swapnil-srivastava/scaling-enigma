@@ -1,23 +1,8 @@
 {
   "name": "component-1",
-  "version": "1.0.0",
-  "description": "A reusable LitElement component named Component1.",
+  "version": "0.0.1",
   "main": "src/Component1.js",
-  "scripts": {
-    "build": "rollup -c",
-    "publish": "npm publish"
-  },
-  "keywords": [
-    "lit-element",
-    "web-components",
-    "component"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "dependencies": {
-    "lit-element": "^3.0.0"
-  },
-  "peerDependencies": {
-    "lit-element": "^3.0.0"
+    "lit": "^3.0.0"
   }
 }
