@@ -19,13 +19,15 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-babel": "^5.3.0",
-    "storybook": "^8.6.4"
+    "storybook": "^8.6.4",
+    "@web/test-runner": "^0.13.0"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c",
-    "azure:prepublish": "cp package.json README.md dist/"
+    "azure:prepublish": "cp package.json README.md dist/",
+    "test": "web-test-runner \"tests/**/*.test.js\""
   },
   "publishConfig": {
     "directory": "dist"
