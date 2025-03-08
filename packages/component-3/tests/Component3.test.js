@@ -1,4 +1,6 @@
 import { html, fixture, expect } from '@open-wc/testing';
+import { expect as chaiExpect } from '@esm-bundle/chai';
+import { setViewport } from '@web/test-runner-commands';
 import '../src/Component3.js';
 
 describe('Component3', () => {
@@ -41,5 +43,11 @@ describe('Component3', () => {
     input.value = null;
     input.dispatchEvent(new Event('input'));
     expect(el.inputValue).to.equal('');
+  });
+
+  it('matches the snapshot', async () => {
+    const el = await fixture(html`<component-3></component-3>`);
+    await setViewport({ width: 800, height: 600 });
+    await expect(el).shadowDom.to.equalSnapshot();
   });
 });

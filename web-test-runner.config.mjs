@@ -3,6 +3,7 @@ import { playwrightLauncher } from '@web/test-runner-playwright';
 export default {
   files: ['packages/*/tests/**/*.test.js'],
   nodeResolve: true,
+  plugins: [],
   browsers: [
     playwrightLauncher({
       product: 'chromium',
@@ -10,12 +11,14 @@ export default {
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       }
-    })
+    }),
+    playwrightLauncher({ product: 'firefox' }),
+    playwrightLauncher({ product: 'webkit' })
   ],
   testFramework: {
     config: {
       ui: 'bdd',
-      timeout: '2000'
+      timeout: '10000'
     }
   },
   coverage: true,
@@ -35,5 +38,15 @@ export default {
       '**/*.stories.*',
       '**/dist/**'
     ]
+  },
+  testRunnerHtml: testFramework =>
+    `<html>
+      <body>
+        <script>window.snapshots = {}</script>
+        <script type="module" src="${testFramework}"></script>
+      </body>
+    </html>`,
+  snapshots: {
+    directory: 'tests/__snapshots__'
   }
 };
