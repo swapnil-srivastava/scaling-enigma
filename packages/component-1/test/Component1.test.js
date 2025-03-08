@@ -25,4 +25,29 @@ describe('Component1', () => {
     div.click();
     expect(clicked).to.be.true;
   });
+
+  it('should render users list correctly', async () => {
+    const testUsers = [
+      { firstName: 'John', lastName: 'Doe', email: 'john@example.com' },
+      { firstName: 'Jane', lastName: 'Smith', email: 'jane@example.com' }
+    ];
+    
+    const el = await fixture(
+      html`<component-1 .users=${testUsers}></component-1>`
+    );
+    
+    const userItems = el.shadowRoot.querySelectorAll('.user-item');
+    expect(userItems.length).to.equal(2);
+    
+    const firstUser = userItems[0].textContent;
+    expect(firstUser).to.include('John');
+    expect(firstUser).to.include('Doe');
+    expect(firstUser).to.include('john@example.com');
+  });
+
+  it('should handle empty users array', async () => {
+    const el = await fixture(html`<component-1></component-1>`);
+    const userItems = el.shadowRoot.querySelectorAll('.user-item');
+    expect(userItems.length).to.equal(0);
+  });
 });
