@@ -6,4 +6,40 @@ describe('Component3', () => {
     const el = await fixture(html`<component-3></component-3>`);
     expect(el.shadowRoot.querySelector('p').textContent).to.equal('Component 3');
   });
+
+  it('has a default property', async () => {
+    const el = await fixture(html`<component-3></component-3>`);
+    expect(el.someProperty).to.equal('default');
+  });
+
+  it('responds to property changes', async () => {
+    const el = await fixture(html`<component-3 someProperty="new value"></component-3>`);
+    expect(el.someProperty).to.equal('new value');
+  });
+
+  it('has a default inputValue property', async () => {
+    const el = await fixture(html`<component-3></component-3>`);
+    expect(el.inputValue).to.equal('');
+  });
+
+  it('responds to input changes', async () => {
+    const el = await fixture(html`<component-3></component-3>`);
+    const input = el.shadowRoot.querySelector('input');
+    input.value = 'new value';
+    input.dispatchEvent(new Event('input'));
+    expect(el.inputValue).to.equal('new value');
+  });
+
+  it('handles invalid property', async () => {
+    const el = await fixture(html`<component-3 someProperty="invalid"></component-3>`);
+    expect(el.someProperty).to.not.equal('default');
+  });
+
+  it('handles invalid input changes', async () => {
+    const el = await fixture(html`<component-3></component-3>`);
+    const input = el.shadowRoot.querySelector('input');
+    input.value = null;
+    input.dispatchEvent(new Event('input'));
+    expect(el.inputValue).to.equal('');
+  });
 });
