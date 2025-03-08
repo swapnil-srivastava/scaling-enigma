@@ -3,12 +3,16 @@
   "private": true,
   "devDependencies": {
     "lerna": "^7.0.0",
-    "@changesets/cli": "^2.18.0"
+    "@changesets/cli": "^2.18.0",
+    "@web/test-runner": "^0.18.0",
+    "@web/test-runner-playwright": "^0.11.0",
+    "playwright": "^1.35.0"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
+    "postinstall": "npx playwright install",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "build": "lerna run build",
@@ -16,6 +20,7 @@
     "build-storybook": "lerna run build-storybook",
     "prepublish": "lerna run prepublish",
     "publish": "lerna publish",
-    "test": "lerna run test"
+    "test": "web-test-runner --config web-test-runner.config.mjs --coverage --groups",
+    "test:watch": "web-test-runner --config web-test-runner.config.mjs --coverage --watch --groups"
   }
 }
