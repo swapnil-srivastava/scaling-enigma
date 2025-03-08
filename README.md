@@ -47,7 +47,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspiration
 - etc
 
+## Project Structure
 
+```
 ├── .changeset/
 │   ├── bitter-donkeys-rescue.md
 │   ├── config.json
@@ -145,3 +147,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 │   │   │   │   ├── Button.js
 │   │   │   │   ├── Button.stories.js
 │   │   │   │   ├── button.css
+├── web-test-runner.config.mjs
+├── README.md
+```
