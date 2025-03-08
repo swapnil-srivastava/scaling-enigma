@@ -6,7 +6,11 @@
     "@changesets/cli": "^2.18.0",
     "@web/test-runner": "^0.18.0",
     "@web/test-runner-playwright": "^0.11.0",
-    "playwright": "^1.35.0"
+    "playwright": "^1.35.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-lit": "^2.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.0.0"
   },
   "workspaces": [
     "packages/*"
@@ -21,6 +25,8 @@
     "prepublish": "lerna run prepublish",
     "publish": "lerna publish",
     "test": "web-test-runner --config web-test-runner.config.mjs --coverage --groups",
-    "test:watch": "web-test-runner --config web-test-runner.config.mjs --coverage --watch --groups"
+    "test:watch": "web-test-runner --config web-test-runner.config.mjs --coverage --watch --groups",
+    "lint": "eslint . --ext .js,.mjs",
+    "format": "prettier --write ."
   }
 }
