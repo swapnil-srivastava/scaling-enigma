@@ -56,97 +56,94 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ├── .devcontainer/
 │   ├── devcontainer.json
 ├── .gitignore
+├── .prettierrc
 ├── lerna.json
 ├── package.json
-├── packages/
-│   ├── component-1/
-│   │   ├── .storybook/
-│   │   │   ├── main.js
-│   │   ├── package.json
-│   │   ├── src/
-│   │   │   ├── Component1.js
-│   │   │   ├── Component1.stories.js
-│   │   │   ├── stories/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── avif-test-image.avif
-│   │   │   │   ├── button.css
-│   │   │   │   ├── Configure.mdx
-│   │   │   │   ├── header.css
-│   │   │   │   ├── Header.js
-│   │   │   │   ├── Header.stories.js
-│   │   │   │   ├── Page.js
-│   │   │   │   ├── Page.stories.js
-│   │   │   │   ├── page.css
-│   │   │   │   ├── Button.js
-│   │   │   │   ├── Button.stories.js
-│   │   │   │   ├── button.css
-│   ├── component-2/
-│   │   ├── .storybook/
-│   │   │   ├── main.js
-│   │   ├── package.json
-│   │   ├── src/
-│   │   │   ├── Component2.js
-│   │   │   ├── Component2.stories.js
-│   │   │   ├── stories/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── avif-test-image.avif
-│   │   │   │   ├── button.css
-│   │   │   │   ├── Configure.mdx
-│   │   │   │   ├── header.css
-│   │   │   │   ├── Header.js
-│   │   │   │   ├── Header.stories.js
-│   │   │   │   ├── Page.js
-│   │   │   │   ├── Page.stories.js
-│   │   │   │   ├── page.css
-│   │   │   │   ├── Button.js
-│   │   │   │   ├── Button.stories.js
-│   │   │   │   ├── button.css
-│   ├── component-3/
-│   │   ├── .storybook/
-│   │   │   ├── main.js
-│   │   ├── package.json
-│   │   ├── src/
-│   │   │   ├── Component3.js
-│   │   │   ├── Component3.stories.js
-│   │   │   ├── stories/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── avif-test-image.avif
-│   │   │   │   ├── button.css
-│   │   │   │   ├── Configure.mdx
-│   │   │   │   ├── header.css
-│   │   │   │   ├── Header.js
-│   │   │   │   ├── Header.stories.js
-│   │   │   │   ├── Page.js
-│   │   │   │   ├── Page.stories.js
-│   │   │   │   ├── page.css
-│   │   │   │   ├── Button.js
-│   │   │   │   ├── Button.stories.js
-│   │   │   │   ├── button.css
-│   ├── new-component/
-│   │   ├── .storybook/
-│   │   │   ├── main.js
-│   │   │   ├── preview.js
-│   │   ├── package.json
-│   │   ├── src/
-│   │   │   ├── MainComponent.js
-│   │   │   ├── MainComponent.stories.js
-│   │   │   ├── ComponentOne.js
-│   │   │   ├── ComponentTwo.js
-│   │   │   ├── ComponentThree.js
-│   │   │   ├── stories/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── avif-test-image.avif
-│   │   │   │   ├── button.css
-│   │   │   │   ├── Configure.mdx
-│   │   │   │   ├── header.css
-│   │   │   │   ├── Header.js
-│   │   │   │   ├── Header.stories.js
-│   │   │   │   ├── Page.js
-│   │   │   │   ├── Page.stories.js
-│   │   │   │   ├── page.css
-│   │   │   │   ├── Button.js
-│   │   │   │   ├── Button.stories.js
-│   │   │   │   ├── button.css
 ├── web-test-runner.config.mjs
-├── README.md
+├── packages/
+    ├── component-1/
+    │   ├── .storybook/
+    │   │   ├── main.js
+    │   ├── src/
+    │   │   ├── Component1.js
+    │   │   ├── Component1.stories.js
+    │   │   ├── stories/
+    │   │   │   ├── assets/
+    │   │   │   ├── Button.js
+    │   │   │   ├── Button.stories.js
+    │   │   │   ├── Configure.mdx
+    │   │   │   ├── Header.js
+    │   │   │   ├── Page.js
+    │   │   │   ├── button.css
+    │   │   │   ├── header.css
+    │   │   │   ├── page.css
+    │   ├── tests/
+    │   │   ├── Component1.test.js
+    │   │   ├── __snapshots__/
+    │   ├── package.json
+    │   ├── rollup.config.js
+    ├── component-2/
+    │   ├── .storybook/
+    │   │   ├── main.js
+    │   ├── src/
+    │   │   ├── Component2.js
+    │   │   ├── Component2.stories.js
+    │   │   ├── stories/
+    │   │   │   ├── assets/
+    │   │   │   ├── Button.js
+    │   │   │   ├── Button.stories.js
+    │   │   │   ├── Configure.mdx
+    │   │   │   ├── Header.js
+    │   │   │   ├── Page.js
+    │   │   │   ├── button.css
+    │   │   │   ├── header.css
+    │   │   │   ├── page.css
+    │   ├── tests/
+    │   │   ├── Component2.test.js
+    │   │   ├── __snapshots__/
+    │   ├── package.json
+    │   ├── rollup.config.js
+    ├── component-3/
+    │   ├── .storybook/
+    │   │   ├── main.js
+    │   ├── src/
+    │   │   ├── Component3.js
+    │   │   ├── Component3.stories.js
+    │   │   ├── stories/
+    │   │   │   ├── assets/
+    │   │   │   ├── Button.js
+    │   │   │   ├── Button.stories.js
+    │   │   │   ├── Configure.mdx
+    │   │   │   ├── Header.js
+    │   │   │   ├── Page.js
+    │   │   │   ├── button.css
+    │   │   │   ├── header.css
+    │   │   │   ├── page.css
+    │   ├── tests/
+    │   │   ├── Component3.test.js
+    │   │   ├── __snapshots__/
+    │   ├── package.json
+    │   ├── rollup.config.js
+    ├── new-component/
+    │   ├── .storybook/
+    │   │   ├── main.js
+    │   ├── src/
+    │   │   ├── MainComponent.js
+    │   │   ├── ComponentOne.js
+    │   │   ├── ComponentTwo.js
+    │   │   ├── ComponentThree.js
+    │   │   ├── stories/
+    │   │   │   ├── assets/
+    │   │   │   ├── Button.js
+    │   │   │   ├── Button.stories.js
+    │   │   │   ├── Configure.mdx
+    │   │   │   ├── Header.js
+    │   │   │   ├── Page.js
+    │   │   │   ├── button.css
+    │   │   │   ├── header.css
+    │   │   │   ├── page.css
+    │   ├── tests/
+    │   │   ├── MainComponent.test.js
+    │   ├── package.json
+    │   ├── rollup.config.js
 ```
