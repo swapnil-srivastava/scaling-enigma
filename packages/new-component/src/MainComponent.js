@@ -3,11 +3,13 @@ import { LitElement, html, css } from 'lit';
 class MainComponent extends LitElement {
   static properties = {
     inputValue: { type: String },
+    someProperty: { type: String } // Add this line
   };
 
   constructor() {
     super();
     this.inputValue = '';
+    this.someProperty = 'default'; // Add this line
   }
 
   static styles = css`

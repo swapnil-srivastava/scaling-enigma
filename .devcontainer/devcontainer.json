@@ -16,13 +16,13 @@
 
 	"containerEnv": {
 		"CHROME_PATH": "/usr/bin/google-chrome" // Update this path to the actual path of your Chrome/Chromium executable
-	}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "sudo npx playwright install-deps && npm install",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
