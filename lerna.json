@@ -2,5 +2,19 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish packages",
+      "changelogPreset": "conventional-changelog-conventionalcommits",
+      "exact": true
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": ["*.md", "tests/**"],
+      "message": "chore(release): publish",
+      "allowBranch": ["main", "next"]
+    }
+  }
 }
