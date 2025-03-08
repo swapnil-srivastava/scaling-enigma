@@ -27,7 +27,7 @@
     "sinon": "^17.0.1"
   },
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6009",
     "build-storybook": "storybook build",
     "build": "rollup -c",
     "azure:prepublish": "cp package.json README.md dist/",
